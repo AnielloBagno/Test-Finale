@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Benvenuto, {{ user.nome }}!</h1>
+
+    <h2>Eventi disponibili:</h2>
+    <ul>
+        <li>
+            <a href="/evento/1">Evento 1: Concerto di Musica Classica</a>
+        </li>
+        <li>
+            <a href="/evento/2">Evento 2: Mostra d'Arte Moderna</a>
+        </li>
+    </ul>
+
+    <h3>Le tue prenotazioni:</h3>
+    <ul>
+        <li>Concerto di Musica Classica - 2 biglietti</li>
+    </ul>
+
+    <a href="/logout">Logout</a>
+</body>
+</html>

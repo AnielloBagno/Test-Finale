@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli Evento</title>
+</head>
+<body>
+    <h1>{{ evento.titolo }}</h1>
+    <p>{{ evento.descrizione }}</p>
+    <p><strong>Data:</strong> {{ evento.data }}</p>
+    <p><strong>Orario:</strong> {{ evento.orario }}</p>
+    <p><strong>Prezzo:</strong> €{{ evento.prezzo }}</p>
+
+    <form action="/prenota/{{ evento.id }}" method="post">
+        <label for="numBiglietti">Numero di biglietti:</label>
+        <input type="number" id="numBiglietti" name="numBiglietti" min="1" required>
+        <button type="submit">Prenota</button>
+    </form>
+
+    <a href="/dashboard">Torna alla Dashboard</a>
+</body>
+</html>
